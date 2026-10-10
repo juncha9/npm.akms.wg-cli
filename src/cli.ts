@@ -6,14 +6,14 @@ import { WgCliError } from "./modules/errors";
 import { renderIssued, renderPeerTable } from "./modules/output";
 import { addPeer, clientFilePathOf, forgetPeer, listPeers, removePeer, showPeer } from "./modules/peers";
 
-const USAGE = `akwg ${CLI_VERSION} — WireGuard 관리자 VPN 계정 발급 · 회수   (긴 이름 akms-wg 도 같다)
+const USAGE = `akms-wg ${CLI_VERSION} — WireGuard 관리자 VPN 계정 발급 · 회수
 
-  sudo akwg                  화면 모드 — ↑↓ 고르기 · a 발급 · Enter 설정/QR · d 회수 · x 설정파일 지우기 · q 끝
-  sudo akwg ls               목록: 이름 · 주소 · 발급일 · 마지막 연결 · 받음/보냄        (= list)
-  sudo akwg add <이름>       키를 만들어 등록 + 클라이언트 설정 파일 + QR
-  sudo akwg show <이름>      그 설정 파일 · QR 다시 보기(forget 전까지)                 (= qr)
-  sudo akwg rm <이름>        회수 — 즉시 끊김                                          (= remove)
-  sudo akwg forget <이름>    설정 파일(개인키)만 지움 — 기기에 넣은 뒤
+  sudo akms-wg               화면 모드 — ↑↓ 로 계정을 골라 Enter: 설정/QR · 설정파일 지우기 · 회수 / 맨 아래 새 계정 발급 · Esc 끝
+  sudo akms-wg ls            목록: 이름 · 주소 · 발급일 · 마지막 연결 · 받음/보냄        (= list)
+  sudo akms-wg add <이름>    키를 만들어 등록 + 클라이언트 설정 파일 + QR
+  sudo akms-wg show <이름>   그 설정 파일 · QR 다시 보기(forget 전까지)                 (= qr)
+  sudo akms-wg rm <이름>     회수 — 즉시 끊김                                          (= remove)
+  sudo akms-wg forget <이름> 설정 파일(개인키)만 지움 — 기기에 넣은 뒤
 
   설정: /etc/akms-wg.json (없어도 됨 — README 참고), 경로는 AKMS_WG_SETTINGS 로 바꿀 수 있다
   대장: /etc/wireguard/<iface>.conf 의 "# peer: <이름> (<날짜>)" 주석`;

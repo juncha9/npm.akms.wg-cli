@@ -1,5 +1,5 @@
 // 패키지 판 — package.json 과 함께 올린다.
-export const CLI_VERSION = "0.0.1";
+export const CLI_VERSION = "0.1.0";
 export const CLI_NAME = "akms-wg";
 
 // 설정 파일 — 없으면 아래 기본값으로 돈다. 서버마다 다른 값(VPC 대역 · 설정 파일 폴더)은 여기에 둔다.

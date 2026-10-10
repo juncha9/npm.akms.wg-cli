@@ -17,7 +17,7 @@ export default defineConfig([
         tsconfig: "./tsconfig.json",
     },
     // 명령줄 — ESM 만(Ink 가 ESM 전용). splitting 을 켜서 TUI 를 따로 떼고 메뉴를 열 때만 불러온다 —
-    // `akwg list` 같은 하위 명령이 React · Ink 를 읽지 않게.
+    // `akms-wg list` 같은 하위 명령이 React · Ink 를 읽지 않게.
     {
         entry: ["src/cli.ts"],
         format: ["esm"],
